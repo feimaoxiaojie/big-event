@@ -33,7 +33,7 @@
             <!-- 第一行：用户名 -->
             <div class="layui-form-item">
                 <i class="layui-icon layui-icon-username"></i>
-                <input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off"
+                <input type="text" name="title" required lay-verify="required" placeholder="请输入用户名" autocomplete="off"
                     class="layui-input">
             </div>
             <!-- 第二行：密码 -->
@@ -44,12 +44,13 @@
             </div>
             <!-- 第三行：登录按钮 -->
             <div class="layui-form-item">
-                <button class="layui-btn layui-btn-fluid layui-bg-blue" lay-submit lay-filter="formDemo">立即提交</button>
+                <button class="layui-btn layui-btn-fluid layui-bg-blue" lay-submit lay-filter="formDemo">登录</button>
             </div>
             <!-- 第四行：超链接 -->
             <div>
-                <a href="javascript:void(0)" id="goto-reg">还没账号，去登录</a>
+                <a href="javascript:;" id="goto-reg">还没账号，去注册</a>
             </div>
+        </form>
     </div>
     <!-- 登录的盒子 end -->
 
@@ -63,7 +64,7 @@
             <!-- 第一行：用户名 -->
             <div class="layui-form-item">
                 <i class="layui-icon layui-icon-username"></i>
-                <input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off"
+                <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名" autocomplete="off"
                     class="layui-input">
             </div>
             <!-- 第二行：密码 -->
@@ -72,19 +73,22 @@
                 <input type="password" name="password" required lay-verify="required" placeholder="请输入密码"
                     autocomplete="off" class="layui-input">
             </div>
-            <!-- 第三行：密码 -->
+            <!-- 第三行：重复密码 -->
             <div class="layui-form-item">
                 <i class="layui-icon layui-icon-password"></i>
-                <input type="password" name="password" required lay-verify="required" placeholder="请输入密码"
+                <input type="password"required lay-verify="required" placeholder="请再次输入密码"
                     autocomplete="off" class="layui-input">
             </div>
             <!-- 第三行：登录按钮 -->
             <div class="layui-form-item">
-                <button class="layui-btn layui-btn-fluid layui-bg-blue" lay-submit lay-filter="formDemo">立即提交</button>
+                <button class="layui-btn layui-btn-fluid layui-bg-blue" lay-submit lay-filter="formDemo">注册</button>
             </div>
             <!-- 第四行：超链接 -->
             <div>
-                <a href="javasc
+                <a href="javascript:;" id="goto-login">已有账号，去登录</a>
+            </div>
+        </form>
+
     </div>
     <!-- 注册的盒子 end -->
 </body>

@@ -39,7 +39,7 @@ form {
     margin: 0 30px;
 }
 
-#goto-reg {
+#goto-reg,#goto-login {
     float: right;
 }
 
