@@ -35,5 +35,56 @@ $(function () {
                 }
             }
         })
+    });
+    //--------------------------------------------------------------
+    //自定义验证规则
+    //使用layui的表单验证功能，分为2步骤
+    //1.加载form模块
+    var form = layui.form;
+    //2.调用form.verify()方法，自定义你的验证规则
+    form.verify({
+        //键（验证规则）：值（验证方法（可以是数组，也可以是函数））
+        //len:[],
+        //len:function(){}
+
+        //正则表达式法
+        // len: [/^[\s]{6,12}$/, '密码长度不对'],
+        len: function (val) {
+            // val表示使用用该验证规则的输入框的值
+            // console.log(val);
+            if (val.trim().length < 6 || val.trim().length > 12) {
+                return '老汤说，密码不对！'
+            };
+        }
+
+    });
+
+    //--------------------------------------------------------------
+    //完成登录功能
+    //1,监听登录表单的提交事件
+    $('#login form').on('submit', function (e) {
+        //2.阻止事件默认跳转事件
+        e.preventDefault();
+        //3.获取用户输入的账号密码
+        var data = $(this).serialize();
+        //4.ajax提交账号密码
+        $.ajax({
+            type: 'POST',
+            url: 'http://www.liulongbin.top:3007/api/login',
+            data: data,
+            success: function (res) {
+                //5.根据服务器返回结果
+                //5.1无论成功还是失败，都给提示
+                alert(res.message);
+                if (res.status === 0) {
+                    //5.2如果登录成功，跳转到首页
+                    // /表示根目录
+                    //跳转到html页面
+                    location.href = '/index.html';
+                }
+                
+            }
+        })
+
     })
 })
