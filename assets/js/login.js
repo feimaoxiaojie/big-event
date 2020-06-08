@@ -55,6 +55,15 @@ $(function () {
             if (val.trim().length < 6 || val.trim().length > 12) {
                 return '老汤说，密码不对！'
             };
+        },
+        same: function (val) {
+            //val表示重复密码
+            //这里还需要一个密码框的值，获取如下
+            var password = $('.pass').val();
+            //比较重复密码
+            if (val != password) {
+                return '两次密码不一致哦！'
+            }
         }
 
     });

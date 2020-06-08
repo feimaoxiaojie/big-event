@@ -71,12 +71,12 @@
             <div class="layui-form-item">
                 <i class="layui-icon layui-icon-password"></i>
                 <input type="password" name="password" required lay-verify="required|len" placeholder="请输入密码"
-                    autocomplete="off" class="layui-input">
+                    autocomplete="off" class="layui-input pass">
             </div>
             <!-- 第三行：重复密码 -->
             <div class="layui-form-item">
                 <i class="layui-icon layui-icon-password"></i>
-                <input type="password" required lay-verify="required" placeholder="请再次输入密码" autocomplete="off"
+                <input type="password" required lay-verify="required|same" placeholder="请再次输入密码" autocomplete="off"
                     class="layui-input">
             </div>
             <!-- 第三行：登录按钮 -->
