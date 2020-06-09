@@ -28,7 +28,7 @@ $(function () {
             success: function (res) {
                 //5.根据接口返回接口
                 //5.1无论成功还是失败，都要给出一个提示
-                alert(res.message);
+                layer.msg(res.message);
                 //5.2成功了，显示登陆盒子，隐藏注册盒子
                 if (res.status === 0) {
                     $('#login').show().next().hide();
@@ -84,11 +84,12 @@ $(function () {
             success: function (res) {
                 //5.根据服务器返回结果
                 //5.1无论成功还是失败，都给提示
-                alert(res.message);
+                layer.msg(res.message);
                 if (res.status === 0) {
                     //5.2如果登录成功，跳转到首页
                     // /表示根目录
                     //跳转到html页面
+                    localStorage.setItem('token', res.token);
                     location.href = '/index.html';
                 }
                 

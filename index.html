@@ -58,27 +58,31 @@
         <div class="layui-side layui-bg-black">
             <div class="layui-side-scroll">
                 <div class="userinfo" href="javascript:;">
-                    <span  class="text-avatar">F</span>
+                    <span class="text-avatar">F</span>
                     <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
                     欢迎&nbsp;&nbsp;<span class="myname">肥猫小姐</span>
                 </div>
                 <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
                 <ul class="layui-nav layui-nav-tree" lay-shrink="all" lay-filter="test">
-                    <li class="layui-nav-item layui-this"><a href=""><i class="layui-icon layui-icon-home"></i>首页</a></li>
+                    <li class="layui-nav-item layui-this"><a href=""><i class="layui-icon layui-icon-home"></i>首页</a>
+                    </li>
                     <li class="layui-nav-item">
                         <a href="javascript:;"><i class="layui-icon layui-icon-form"></i>文章管理</a>
                         <dl class="layui-nav-child">
                             <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>列表一</a></dd>
                             <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>列表二</a></dd>
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>列表三</a></dd>
+                            <dd><a href=""><i class="layui-icon layui-icon-app"></i>列表三</a></dd>
                         </dl>
                     </li>
                     <li class="layui-nav-item">
                         <a href="javascript:;"><i class="layui-icon layui-icon-user"></i>个人中心</a>
                         <dl class="layui-nav-child">
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>基本资料</a></dd>
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>更换头像</a></dd>
-                            <dd><a href=""><i class="layui-icon layui-icon-app"></i>重置密码</a></dd>
+                            <dd><a href="http://www.baidu.com" target="fm"><i
+                                        class="layui-icon layui-icon-app"></i>百度</a></dd>
+                            <dd><a href="http://www.sina.com" target="fm"><i
+                                        class="layui-icon layui-icon-app"></i>新浪</a></dd>
+                            <dd><a href="http://www.tencent.com" target="fm"><i
+                                        class="layui-icon layui-icon-app"></i>腾讯</a></dd>
                         </dl>
                     </li>
                 </ul>
@@ -87,7 +91,8 @@
 
         <div class="layui-body">
             <!-- 内容主体区域 -->
-            <div style="padding: 15px;">内容主体区域</div>
+            <!-- <div style="padding: 15px;">内容主体区域</div> -->
+            <iframe src="/home/dashboard.html" frameborder="0" name="fm"></iframe>
         </div>
 
         <div class="layui-footer">

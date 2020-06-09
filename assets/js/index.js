@@ -61,6 +61,7 @@ function getUserInfo() {
             'Authorization': localStorage.getItem('token')
         }
     });
+
 }
 
 
