@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- 加载layui的css -->
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <!-- 加载copper的css -->
+    <link rel="stylesheet" href="/assets/lib/cropper/cropper.css">
+    <!-- 加载自己写的css -->
+    <link rel="stylesheet" href="/assets/css/user/changeavatar.css">
+
+    <!-- 加载jQuery的js -->
+    <script src="/assets/lib/jquery.js"></script>
+    <!-- 加载layui的js -->
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <!-- 加载copper的js -->
+    <script src="/assets/lib/cropper/Cropper.js"></script>
+    <link rel="stylesheet" href="/assets/lib/cropper/jquery-cropper.js">
+    <!-- 加载自己写的js -->
+    <script src="/assets/js/user/changeavtar.js"></script>
 </head>
+
 <body>
-   \
+    <div class="layui-card">
+        <div class="layui-card-header">更换头像</div>
+        <div class="layui-card-body">
+            <!-- 内容区 -->
+            <!-- 第一行的图片建材和预览区域 -->
+            <div class="row1">
+                <!-- 图片剪裁区域 -->
+                <div class="modal-body">
+                    <div class="avatar-body">
+
+                        <div class="avatar-upload">
+                            <input class="avatar-src" name="avatar_src" type="hidden">
+                            <input class="avatar-data" name="avatar_data" type="hidden"
+                                value="{&quot;x&quot;:-81.07767227982114,&quot;y&quot;:-58.67122450777055,&quot;height&quot;:521.9806072976934,&quot;width&quot;:521.9806072976934,&quot;rotate&quot;:0}">
+                            <label for="avatarInput">Local upload</label>
+                            <input class="avatar-input" id="avatarInput" name="avatar_file" type="file">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="avatar-wrapper"><img
+                                        src="blob:http://www.jq22.com/ef8b2fa2-fd9c-4a5b-8c53-5882d6942a16"
+                                        class="cropper-hidden">
+                                    <div class="cropper-container cropper-bg" style="width: 621px; height: 364px;">
+                                        <div class="cropper-canvas"
+                                            style="width: 278.938px; height: 278.938px; left: 171.031px; top: 42.5312px;">
+                                            <img src="blob:http://www.jq22.com/ef8b2fa2-fd9c-4a5b-8c53-5882d6942a16"
+                                                class=""
+                                                style="width: 278.938px; height: 278.938px; margin-left: 0px; margin-top: 0px; transform: none;">
+                                        </div>
+                                        <div class="cropper-drag-box cropper-modal cropper-move" data-drag="move"></div>
+                                        <div class="cropper-crop-box"
+                                            style="width: 291.2px; height: 291.2px; left: 125.8px; top: 9.8px;"><span
+                                                class="cropper-view-box"><img
+                                                    src="blob:http://www.jq22.com/ef8b2fa2-fd9c-4a5b-8c53-5882d6942a16"
+                                                    style="width: 278.938px; height: 278.938px; margin-left: 45.2312px; margin-top: 32.7312px; transform: none;"></span><span
+                                                class="cropper-dashed dashed-h"></span><span
+                                                class="cropper-dashed dashed-v"></span><span class="cropper-face"
+                                                data-drag="all"></span><span class="cropper-line line-e"
+                                                data-drag="e"></span><span class="cropper-line line-n"
+                                                data-drag="n"></span><span class="cropper-line line-w"
+                                                data-drag="w"></span><span class="cropper-line line-s"
+                                                data-drag="s"></span><span class="cropper-point point-e"
+                                                data-drag="e"></span><span class="cropper-point point-n"
+                                                data-drag="n"></span><span class="cropper-point point-w"
+                                                data-drag="w"></span><span class="cropper-point point-s"
+                                                data-drag="s"></span><span class="cropper-point point-ne"
+                                                data-drag="ne"></span><span class="cropper-point point-nw"
+                                                data-drag="nw"></span><span class="cropper-point point-sw"
+                                                data-drag="sw"></span><span class="cropper-point point-se"
+                                                data-drag="se"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="avatar-preview preview-lg" style="width: 184px; height: 184px;"><img
+                                        src="img/picture.jpg"
+                                        style="width: 174.336px; height: 174.336px; margin-left: 28.2695px; margin-top: 20.457px; transform: none;">
+                                </div>
+                                <div class="avatar-preview preview-md" style="width: 100px; height: 100px;"><img
+                                        src="img/picture.jpg"
+                                        style="width: 93.8732px; height: 93.8732px; margin-left: 15.222px; margin-top: 11.0153px; transform: none;">
+                                </div>
+                                <div class="avatar-preview preview-sm" style="width: 50px; height: 50px;"><img
+                                        src="img/picture.jpg"
+                                        style="width: 45.9787px; height: 45.9787px; margin-left: 7.4557px; margin-top: 5.39526px; transform: none;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row avatar-btns">
+                            <div class="col-md-3">
+                                <button class="btn btn-primary btn-block avatar-save" type="submit">Done</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
