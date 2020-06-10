@@ -26,46 +26,33 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label ">原密码</label>
                     <div class="layui-input-inline">
-                        <input type="password" name="oldPwd" required lay-verify="required" placeholder="请输入密码"
+                        <input type="password" name="oldPwd" required lay-verify="required|len" placeholder="请输入密码"
                             autocomplete="off" class="layui-input oldPwd">
                     </div>
                 </div>    
                 <div class="layui-form-item">
                     <label class="layui-form-label">新密码</label>
                     <div class="layui-input-inline">
-                        <input type="password" name="newPwd" required lay-verify="required|diff" placeholder="请输入密码"
+                        <input type="password" name="newPwd" required lay-verify="required|diff|len" placeholder="请输入密码"
                             autocomplete="off" class="layui-input  newPwd">
                     </div>
                 </div>  
                 <div class="layui-form-item">
                     <label class="layui-form-label">确认新密码</label>
                     <div class="layui-input-inline">
-                        <input type="password" name="password" required lay-verify="required|same" placeholder="请输入密码"
+                        <input type="password" required lay-verify="required|same|len" placeholder="请输入密码"
                             autocomplete="off" class="layui-input">
                     </div>
                 </div>         
                 <div class="layui-form-item">
                     <div class="layui-input-block">
-                        <button class="layui-btn btn" lay-submit lay-filter="formDemo">修改密码</button>
+                        <button class="layui-btn" lay-submit lay-filter="formDemo">修改密码</button>
                         <button type="reset" class="layui-btn layui-btn-primary">重置</button>
                     </div>
                 </div>
             </form>
           </div>
        
-
-        <script>
-            //Demo
-            layui.use('form', function () {
-                var form = layui.form;
-
-                //监听提交
-                form.on('submit(formDemo)', function (data) {
-                    layer.msg(JSON.stringify(data.field));
-                    return false;
-                });
-            });
-        </script>
     </div>
 </body>
 
